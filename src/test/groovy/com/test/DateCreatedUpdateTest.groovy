@@ -13,7 +13,7 @@ class DateCreatedUpdateTest extends Specification implements DatabaseFixture {
         migrate()
     }
 
-    def "Test some date"() {
+    def "Test dateCreated insert"() {
         given:
         TestEntity test = new TestEntity();
 
@@ -25,7 +25,7 @@ class DateCreatedUpdateTest extends Specification implements DatabaseFixture {
 
     }
 
-    def "Test dateCreated"() {
+    def "Test dateCreated update"() {
         given:
         TestEntity test = new TestEntity();
         test = testRepository.save(test).block()
