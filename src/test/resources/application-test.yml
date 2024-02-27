@@ -1,0 +1,26 @@
+
+micronaut:
+  server:
+    port: -1
+    ssl:
+      enabled: false
+  http:
+    client:
+      read-timeout: 1m
+
+datasources:
+  default:
+    driverClassName: org.testcontainers.jdbc.ContainerDatabaseDriver
+    url: jdbc:tc:postgresql:12:///db
+
+r2dbc:
+  datasources:
+    default:
+      url: r2dbc:tc:postgresql:12:///db?TC_IMAGE_TAG=12
+      dialect: postgres
+
+flyway:
+  enabled: true
+  datasources:
+    default:
+      enabled: true

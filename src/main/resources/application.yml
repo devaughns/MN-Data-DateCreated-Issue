@@ -1,0 +1,13 @@
+micronaut:
+  application:
+    name: dateCreatedTest
+netty:
+  default:
+    allocator:
+      max-order: 3
+
+flyway:
+  enabled: true
+  datasources:
+    default:
+      enabled: true
